@@ -4,6 +4,7 @@ channels:
   - omnia
   - defaults
 dependencies:
+  - nomkl
   - biopython=1.74
   - python=3.7.3
   - openmm=7.4.0
