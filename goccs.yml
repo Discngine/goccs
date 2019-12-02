@@ -1,0 +1,12 @@
+name: goccs
+channels:
+  - conda-forge
+  - omnia
+  - defaults
+dependencies:
+  - biopython=1.74
+  - python=3.7.3
+  - openmm=7.4.0
+  - parmed=3.2.0
+  - pdbfixer=1.6
+  - python=3.7.3
