@@ -25,7 +25,7 @@ def pdb2xyz(inputfile,outputPrefix,keepIntermediate=False):
 
     natoms=sum(1 for _ in structure.get_atoms())
 
-    print("Writing output")
+    #print("Writing output")
     outputhandle=open(xyzoutfilename,"w")
     outputhandle.write("""%d
     empty line\n"""%(natoms))
