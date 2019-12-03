@@ -3,6 +3,7 @@ import sys,getopt
 sys.path.append("scripts")
 import pdb2xyz
 
+#print(sys.argv)
 argumentList = sys.argv[1:]
 unixOptions = "hi:kap"
 gnuOptions = ["help","input=","keep","approximation","processes"]
@@ -74,7 +75,7 @@ if filename and mode:
     if mode=="pdb":
         outprefix=filename.split(".")[0]
         pdb2xyz.pdb2xyz(filename,outprefix,keepIntermediate=keep)
-        runGoccs(filename,approximation,ncpus)
+        runGoccs(outprefix+".xyz",approximation,ncpus)
 
 
     if mode=="xyz":
