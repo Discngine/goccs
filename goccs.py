@@ -52,7 +52,7 @@ for currentArgument, currentValue in arguments:
     elif currentArgument in ("-p", "--processes"):
         ncpus=int(currentValue)
     elif currentArgument in ("-i", "--input"):
-        print (("Input file: %s") % (currentValue))
+        #print (("Input file: %s") % (currentValue))
         if(len(currentValue.split("."))==2):
             extension=currentValue.split(".")[1]
             filename=currentValue
