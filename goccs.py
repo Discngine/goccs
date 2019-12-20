@@ -6,7 +6,7 @@ import pdb2xyz
 #print(sys.argv)
 argumentList = sys.argv[1:]
 unixOptions = "hi:kap"
-gnuOptions = ["help","input=","keep","approximation","processes"]
+gnuOptions = ["help","input=","keep","approximation=","processes="]
 
 
 def runGoccs(inputfile,approximation,ncpus):
@@ -17,13 +17,13 @@ def runGoccs(inputfile,approximation,ncpus):
 
 def printUsage():
     print("""
-USAGE: python goccs.py --input=input.pdb --keep
-or   : python goccs.py --input=input.xyz
+USAGE: python goccs.py --input input.pdb --keep
+or   : python goccs.py --input input.xyz
        available arguments: 
-       -i / --input         : Input PDB or xyz file
-       -k / --keep          : Specify if you want to keep the intermediate PDB file
-       -a / --approximation : Optional - CCS approximation should be PA (projection approximation) or EHS (exact hard sphere)
-       -p / --processes     : Optional - number of CPU's to use for the calculation
+       -i / --input                 : Input PDB or xyz file
+       -k / --keep                  : Specify if you want to keep the intermediate PDB file
+       -a / --approximation EHS/PA  : Optional - CCS approximation should be PA (projection approximation) or EHS (exact hard sphere)
+       -p / --processes #nCPUS      : Optional - number of CPU's to use for the calculation
     """)
 
 
@@ -40,6 +40,7 @@ filename=""
 keep=False
 approximation="PA"
 ncpus=None
+
 
 for currentArgument, currentValue in arguments:
     if currentArgument in ("-h", "--help"):
